@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>GO语言印象 | 猿程序-Elangx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="看了一段时间的GO，是时候来一波总结了
+GO语言自从出生以来，一直带着google出品的光环，有人顶，有人踩。不过所有事物都会有争论，这也是正常的，具体怎么样，优点缺点来是要自己体会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GO语言印象">
+<meta property="og:url" content="http://www.apepro.com/2016/08/05/go-impression/index.html">
+<meta property="og:site_name" content="猿程序-Elangx">
+<meta property="og:description" content="看了一段时间的GO，是时候来一波总结了
+GO语言自从出生以来，一直带着google出品的光环，有人顶，有人踩。不过所有事物都会有争论，这也是正常的，具体怎么样，优点缺点来是要自己体会">
+<meta property="og:updated_time" content="2016-08-05T10:07:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GO语言印象">
+<meta name="twitter:description" content="看了一段时间的GO，是时候来一波总结了
+GO语言自从出生以来，一直带着google出品的光环，有人顶，有人踩。不过所有事物都会有争论，这也是正常的，具体怎么样，优点缺点来是要自己体会">
+  
+    <link rel="alternative" href="/atom.xml" title="猿程序-Elangx" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Elangx</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">少谈些主义 多研究些问题</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/elangx/" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/GO/" style="font-size: 13.33px;">GO</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/技术笔记/" style="font-size: 10px;">技术笔记</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Elangx</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Elangx</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">少谈些主义 多研究些问题</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/elangx/" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-go-impression" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/05/go-impression/" class="article-date">
+  	<time datetime="2016-08-05T10:06:27.000Z" itemprop="datePublished">2016-08-05 18:06:27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      GO语言印象
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GO/">GO</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>看了一段时间的GO，是时候来一波总结了</p>
+<p>GO语言自从出生以来，一直带着google出品的光环，有人顶，有人踩。不过所有事物都会有争论，这也是正常的，具体怎么样，优点缺点来是要自己体会<a id="more"></a></p>
+<h3 id="简洁"><a href="#简洁" class="headerlink" title="简洁"></a>简洁</h3><p>简洁应该是我对GO的最大印象，语法简练不墨迹，跟它主要的对手C++相比那是相当明显的，定义不要类型，不要头文件，也不支持一堆特性，就让你踏踏实实写代码就行，在我看来现在冒出来的一堆JS的库就不简洁，这个也要想那个也想要最后写出来的代码看着乱七八糟，用两个东西写出来的简直就像两个语言</p>
+<p>但是没有了一些特性当然也会有失去一些便利，GO中有指针，但不支持指针操作，不过好在有<code>slice</code>，也没有过模板类，不过我觉得提供的<code>map</code>,<code>slice</code>,<code>array</code>基本上可以解决模板问题，不用关心内存回收问题，也不耽误操作具体的自定义类型，有点像是PHP里的强大的数组的感觉</p>
+<p>GO的简洁还是恰到好处的，像python那样连<code>{}</code>都没有的，我已经踩了好几个坑了</p>
+<h3 id="强制性"><a href="#强制性" class="headerlink" title="强制性"></a>强制性</h3><p>这个特点我觉得还是挺重要的，我不知道GO是不是第一个严格规定<code>{</code>必须写在行尾的语言，这个东西在我看来简直终结了两大门派的正直，不这么写你就不能通过，而且它也不是为了这样才让这么写，只是为了编译时能自动加<code>;</code>而已。抛开这些不说增加一些这样语法上的强制性我觉得倒是件好事。统一语法风格，所有人写出来的格式一样，这样对之后看代码的人会有非常好的体验</p>
+<p>源码也有要求，不能东放一块，西放一块的，而且和你的package名对应，可以直接从github等上面拉下来直接编译就完了</p>
+<p>全静态编译，结果出来就是一个可执行文件，不给选择，也不用纠结去链接别的package</p>
+<h3 id="工具链"><a href="#工具链" class="headerlink" title="工具链"></a>工具链</h3><p>GO语言的工具链很完整，甚至还有<code>gofmt</code>这样的东西，而且从github等上面拉代码直接<code>go get
+xxxx</code>就可以，简直不要太方便，官方还给了一大堆的东西，服务到家</p>
+<h3 id="编译速度"><a href="#编译速度" class="headerlink" title="编译速度"></a>编译速度</h3><p>我现在虽然不再写C了，但还是会记得当初编译的速度，而且现在随便编译个包也得等上一会儿，更不要说debug时候的感觉了，GO把编译速度提升上来绝对是一个非常正确的做法，只是这样相对于C/C++就会少偷懒很多</p>
+<h3 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h3><p>GO确实是为并发而生，<code>goroutine</code>说起就起，不起几个都不好意思说自己写的是GO，而且还有<code>channel</code>这样比较好的通信解决方案，加上简单的语法，很轻松就可以写出一段来</p>
+<h3 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h3><p>这个是把C/C++程序员解放出来的一个东西，不用考虑内存泄露怎么办，什么时候释放，忘了释放怎么办，各种debug检查</p>
+<p>不过之前看过几篇文章提到GC的效率，在高并发下GC用时过长会阻塞所有线程，当时好像是<code>1.4</code>时代？不知道现在的<code>1.6</code>会怎么样</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总之感觉GO还是值得一学的，起码对于我这样的PHP或者python来看，有速度、语法简单，还能写WEB，这3点就足够了</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/09/groupcache-analysis-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          groupcache源码解析(1)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/01/the-zen-of-design-patterns-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">笔记---《设计模式之禅》(1)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="go-impression" data-title="GO语言印象" data-url="http://www.apepro.com/2016/08/05/go-impression/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"xsong16"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Elangx
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.6.1/MathJax.js">
+</script>
+
+
+  </div>
+</body>
+</html>

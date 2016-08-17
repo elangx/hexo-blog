@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>PHP中使用xhprof | 猿程序-Elangx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="xhprof安装xhprof的安装与一般php扩展一样，这里直接给出xhprof的地址：https://github.com/phacility/xhprof，其中extension目录中的就是它的php扩展
+xhprof使用安装成功后我们就可以使用相应的函数了，比如xhprof_enable(),xhprof_disable()这类的，我们得到的包里有一个example目录，是一个使用事例：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP中使用xhprof">
+<meta property="og:url" content="http://www.apepro.com/2016/05/26/php-with-xhprof/index.html">
+<meta property="og:site_name" content="猿程序-Elangx">
+<meta property="og:description" content="xhprof安装xhprof的安装与一般php扩展一样，这里直接给出xhprof的地址：https://github.com/phacility/xhprof，其中extension目录中的就是它的php扩展
+xhprof使用安装成功后我们就可以使用相应的函数了，比如xhprof_enable(),xhprof_disable()这类的，我们得到的包里有一个example目录，是一个使用事例：">
+<meta property="og:image" content="http://7u2kbh.com1.z0.glb.clouddn.com/20160526201726.png">
+<meta property="og:updated_time" content="2016-07-29T03:18:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP中使用xhprof">
+<meta name="twitter:description" content="xhprof安装xhprof的安装与一般php扩展一样，这里直接给出xhprof的地址：https://github.com/phacility/xhprof，其中extension目录中的就是它的php扩展
+xhprof使用安装成功后我们就可以使用相应的函数了，比如xhprof_enable(),xhprof_disable()这类的，我们得到的包里有一个example目录，是一个使用事例：">
+<meta name="twitter:image" content="http://7u2kbh.com1.z0.glb.clouddn.com/20160526201726.png">
+  
+    <link rel="alternative" href="/atom.xml" title="猿程序-Elangx" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Elangx</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">少谈些主义 多研究些问题</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/elangx/" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/GO/" style="font-size: 13.33px;">GO</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/技术笔记/" style="font-size: 10px;">技术笔记</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Elangx</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Elangx</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">少谈些主义 多研究些问题</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/elangx/" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-php-with-xhprof" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/26/php-with-xhprof/" class="article-date">
+  	<time datetime="2016-05-26T11:45:55.000Z" itemprop="datePublished">2016-05-26 19:45:55</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PHP中使用xhprof
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="xhprof安装"><a href="#xhprof安装" class="headerlink" title="xhprof安装"></a>xhprof安装</h3><p>xhprof的安装与一般php扩展一样，这里直接给出xhprof的地址：<a href="https://github.com/phacility/xhprof" target="_blank" rel="external">https://github.com/phacility/xhprof</a>，其中extension目录中的就是它的php扩展</p>
+<h3 id="xhprof使用"><a href="#xhprof使用" class="headerlink" title="xhprof使用"></a>xhprof使用</h3><p>安装成功后我们就可以使用相应的函数了，比如<code>xhprof_enable()</code>,<code>xhprof_disable()</code>这类的，我们得到的包里有一个example目录，是一个使用事例：<br><a id="more"></a><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span><span class="params">($x)</span> </span>&#123;</div><div class="line">  <span class="keyword">if</span> ($x &gt; <span class="number">0</span>) &#123;</div><div class="line">    bar($x - <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="keyword">for</span> ($idx = <span class="number">0</span>; $idx &lt; <span class="number">5</span>; $idx++) &#123;</div><div class="line">    bar($idx);</div><div class="line">    $x = strlen(<span class="string">"abc"</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// start profiling</span></div><div class="line">xhprof_enable();</div><div class="line"><span class="comment">// run program</span></div><div class="line">foo();</div><div class="line"><span class="comment">// stop profiler</span></div><div class="line">$xhprof_data = xhprof_disable();</div><div class="line"><span class="comment">// display raw xhprof data for the profiler run</span></div><div class="line">print_r($xhprof_data);</div><div class="line">$XHPROF_ROOT = realpath(dirname(<span class="keyword">__FILE__</span>) .<span class="string">'/..'</span>);</div><div class="line"><span class="keyword">include_once</span> $XHPROF_ROOT . <span class="string">"/xhprof_lib/utils/xhprof_lib.php"</span>;</div><div class="line"><span class="keyword">include_once</span> $XHPROF_ROOT . <span class="string">"/xhprof_lib/utils/xhprof_runs.php"</span>;</div><div class="line"><span class="comment">// save raw data for this profiler run using default</span></div><div class="line"><span class="comment">// implementation of iXHProfRuns.</span></div><div class="line">$xhprof_runs = <span class="keyword">new</span> XHProfRuns_Default();</div><div class="line"><span class="comment">// save the run under a namespace "xhprof_foo"</span></div><div class="line">$run_id = $xhprof_runs-&gt;save_run($xhprof_data, <span class="string">"xhprof_foo"</span>);</div><div class="line"><span class="keyword">echo</span> <span class="string">"---------------\n"</span>.</div><div class="line">     <span class="string">"Assuming you have set up the http based UI for \n"</span>.</div><div class="line">     <span class="string">"XHProf at some address, you can view run at \n"</span>.</div><div class="line">     <span class="string">"http://&lt;xhprof-ui-address&gt;/index.php?run=$run_id&amp;source=xhprof_foo\n"</span>.</div><div class="line">     <span class="string">"---------------\n"</span>;</div></pre></td></tr></table></figure></p>
+<p>从这里可以看到xhprof的使用过程，其中<code>xhprof_enable</code>与<code>xhprof_disable</code>之间的就是要监测的执行代码，这里会监测的就是foo()及foo()内部的bar()函数，并且xhprof_disable会返回数据结果，之后的代码就是将这些数据保存下来，因为我们还需要进一步分析。</p>
+<p>这里用<code>XHProfRuns_Default-&gt;save_run()</code>方法保存数据，它的目录可以在<code>php.ini</code>中<code>xhprof.output_dir</code>指定（在<code>xhprof_runs.php</code>里可以看到，这也是xhprof中唯一一个可设置的参数），这个例子后面还会输出一个<code>http://&lt;xhprof-ui-address&gt;/index.php?run=$run_id&amp;source=xhprof_foo\n</code>，这个就是它另外包含的一个简单的可以展示数据的web应用，在目录xhprof_html中，通过访问这个应用可以看到这次请求的具体数据。</p>
+<h3 id="注入WEB应用"><a href="#注入WEB应用" class="headerlink" title="注入WEB应用"></a>注入WEB应用</h3><p>虽然使用xhprof只需要几行代码，但每次还要手动添加还是太麻烦，不过好在有别的方法可以实现通用，我们把需要添加的代码写到一个文件中，通过nginx或php的配置可以实现：</p>
+<ul>
+<li>在<code>php.ini</code>中添加<code>auto_prepend_file=/path/inject.php</code>，特点是所有的应用都会自动添加xhprof</li>
+<li>在<code>nginx.conf</code>的应用配置中添加<code>fastcgi_param PHP_VALUE &quot;auto_prepend_file=/path/inject.php&quot;</code>;，特点是可以分应用添加<h3 id="更好的数据展示结果–xhrpfo-io"><a href="#更好的数据展示结果–xhrpfo-io" class="headerlink" title="更好的数据展示结果–xhrpfo.io"></a>更好的数据展示结果–xhrpfo.io</h3>原生所使用的展示方式稍微简陋些，我们也可以自己来操作数据的保存和展示，但这东西肯定有别人已经做好的轮子，我们就不用再造了，这里说的是<a href="https://github.com/gajus/xhprof.io" target="_blank" rel="external">xhprof.io</a>，它是把我们的每次的数据保存到数据库中的，所以我们先要新建一个数据库。之后把包里的<code>setup/database.sql</code>导入到数据库中，其实看下<code>xhprof.io</code>这其实就是一个WEB应用，我们首先把<code>xhprof/includes/config.inc.smaple.php</code>这个文件<code>cp</code>到<code>xhprof/includes/config.inc.php</code>：<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="keyword">return</span> <span class="keyword">array</span>(</div><div class="line">	<span class="string">'url_base'</span> =&gt; <span class="string">'https://dev.anuary.com/8d50658e-f8e0-5832-9e82-6b9e8aa940ac/'</span>,</div><div class="line">	<span class="string">'url_static'</span> =&gt; <span class="keyword">null</span>, <span class="comment">// When undefined, it defaults to $config['url_base'] . 'public/'. This should be absolute URL.</span></div><div class="line">	<span class="string">'pdo'</span> =&gt; <span class="keyword">new</span> PDO(<span class="string">'mysql:dbname=your_database_name;host=localhost;charset=utf8'</span>, <span class="string">'username'</span>, <span class="string">'password'</span>),</div><div class="line">    <span class="string">'enable'</span> =&gt; <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//enable for 1/100 probability</span></div><div class="line">        <span class="comment">//return rand(0, 100) === 42;</span></div><div class="line"></div><div class="line">        <span class="comment">//enable always</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>把里面的pdo对应的参数改成自己的数据库配置，另外url_base修改为这个应用的访问url，比如<code>http://localhost:8080/xhpro.io/</code>，url_static不需要添加，enable那个函数代表需要检测的条件，比如 <code>return $_GET[&#39;xhprof&#39;] === &#39;1&#39;</code> 或例子中的 <code>return rand(0, 100) === 42</code> 这样的百分之一的监测率（线上为了性能，不应该全部监测）。</p>
+<p>接下来，类似前面的方法，把<code>inc/inject.php</code>注入到你们应用中，这个地方有个坑，这个文件中的 <code>xhprof_enable(XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_CPU)</code>这个函数在我的php5.6中会使nginx报502的错，google下发现这是<a href="https://www.drupal.org/node/2126573" target="_blank" rel="external">xhprof的bug</a>，修改为<code>xhprof_enable(XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_CPU)</code>后问题解决，之后我们访问xhprof.io后就可以看到我们访问过程中的数据了<br><img src="http://7u2kbh.com1.z0.glb.clouddn.com/20160526201726.png" alt=""></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/28/when-we-meet-the-aliens/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          当人类遇到外星人——科幻电影与《三体》
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/20/happy-520/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">520</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="php-with-xhprof" data-title="PHP中使用xhprof" data-url="http://www.apepro.com/2016/05/26/php-with-xhprof/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"xsong16"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Elangx
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.6.1/MathJax.js">
+</script>
+
+
+  </div>
+</body>
+</html>

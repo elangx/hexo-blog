@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>笔记---《设计模式之禅》(1) | 猿程序-Elangx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="具体技术的东西不知道看什么了，于是昨天在京东买了本《设计模式之禅》，今天晚上才到，先读了第一部分，第一章中没有提具体的模式，但讲了到了设计过程中的几个原则：
+
+单一职责原则
+里氏替换原则
+依赖倒置原则
+接口隔离原则
+迪米特法则
+开闭原则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记---《设计模式之禅》(1)">
+<meta property="og:url" content="http://www.apepro.com/2016/08/01/the-zen-of-design-patterns-1/index.html">
+<meta property="og:site_name" content="猿程序-Elangx">
+<meta property="og:description" content="具体技术的东西不知道看什么了，于是昨天在京东买了本《设计模式之禅》，今天晚上才到，先读了第一部分，第一章中没有提具体的模式，但讲了到了设计过程中的几个原则：
+
+单一职责原则
+里氏替换原则
+依赖倒置原则
+接口隔离原则
+迪米特法则
+开闭原则">
+<meta property="og:updated_time" content="2016-08-01T11:27:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="笔记---《设计模式之禅》(1)">
+<meta name="twitter:description" content="具体技术的东西不知道看什么了，于是昨天在京东买了本《设计模式之禅》，今天晚上才到，先读了第一部分，第一章中没有提具体的模式，但讲了到了设计过程中的几个原则：
+
+单一职责原则
+里氏替换原则
+依赖倒置原则
+接口隔离原则
+迪米特法则
+开闭原则">
+  
+    <link rel="alternative" href="/atom.xml" title="猿程序-Elangx" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Elangx</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">少谈些主义 多研究些问题</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/elangx/" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/GO/" style="font-size: 13.33px;">GO</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/技术笔记/" style="font-size: 10px;">技术笔记</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Elangx</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Elangx</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">少谈些主义 多研究些问题</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/elangx/" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-the-zen-of-design-patterns-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/01/the-zen-of-design-patterns-1/" class="article-date">
+  	<time datetime="2016-07-31T16:01:50.000Z" itemprop="datePublished">2016-08-01 00:01:50</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      笔记---《设计模式之禅》(1)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术笔记/">技术笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>具体技术的东西不知道看什么了，于是昨天在京东买了本《设计模式之禅》，今天晚上才到，先读了第一部分，第一章中没有提具体的模式，但讲了到了设计过程中的几个原则：</p>
+<ol>
+<li>单一职责原则</li>
+<li>里氏替换原则</li>
+<li>依赖倒置原则</li>
+<li>接口隔离原则</li>
+<li>迪米特法则</li>
+<li>开闭原则<a id="more"></a></li>
+</ol>
+<p>相较于java，PHP简单了许多，开发中的各种web框架在我看来都差不了太多，你说各种框架之间能有多大区别？太差也差不到哪，太高也高不到哪，许多用法也就是个人的习惯，也凸现不出框架的设计优点，而对于大名顶顶的SSH（虽然我不懂），java方面的设计就要复杂的多，PHP中大量的数组使用，替代了java里这种绝对面向对象的概念，大家使用PHP的很大原因都是因为其灵活，数组传递就可以了，虽说方便灵活，也省去了类和函数的调用这样的耗时操作，但是这样也使得代码有些乱了。设计模式如果应用也确实是一个需要好好想想的问题。<br>这本书主要是讲java中的设计模式，模式主要是对于抽象类与接口。上面这几个虽然没有提到具体模式，但也是在设计之中应该尽可能遵守的。</p>
+<h4 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h4><p>一个类或接口应该只完成一项任务，这个应该是比较容易理解的一个原则，个人觉得也是面向对象中的一个主要原则，比如接口<code>IPencil</code>里就不应该有<code>erase()</code>方法，<code>IEraser</code>里也不该有<code>write()</code>方法，如果有一根铅笔，上面带一块橡皮，那也应该实现这两个接口<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">Interface IPencil &#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line">Interface IEarser &#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">earse</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">class</span> Pencil implements IPencil, IEarser &#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"写几个字"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">earse</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"就当上面字没写"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h4><p>这个原则应该是为了约束扩展的，就是一个业务中所使用的实现类，是可以被替换成他的了类而不影响功能的，其实我觉得这也有个隐晦的含义，就是子类应该尽可能不改变父类的功能，只扩展父类希望你扩展的及抽象类</p>
+<h4 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h4><p>这个意思就是子类应该要依赖父类，而不应该父类去依赖子类，比如上面的铅笔，如果用抽象类来实现的话<code>CPencil</code>里应该有<code>abstract
+write()</code>的方法，而子类可能带有<code>earse()</code>方法，但父类不应该依赖子类中的<code>earse()</code>方法。所谓倒置的含义按作者意思应该是我们程序本身就是对现实的抽象，比如我们是先看到一个铅笔，不管是不是带有橡皮的，而不是首先总结铅笔的功能，所以代码设计是一种相反的思维</p>
+<h4 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h4><p>这个也很像一个为了扩展而考虑的，将一些可能会有变动的东西分离开来，原文说的是美女的不同定义，脸和身材好叫美女，气质好也叫美女，可能现在有这两个一起才叫美女，也可能一天只看脸和身材了，所以气质就可以去掉，这样设计时可以把脸和身材做为一个接口，气质做为另一个接口，定义美女时实现这两个接口就可以，这样要是你只看脸那只用第一个接口来验证就可以了</p>
+<h4 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h4><p>这个意思就是类要大包大揽起来，自己的活自己做好，不要过多暴露给别的类，就像政府的工作一样，不要什么事都要来办事的百姓们来跑腿，比如办个证件，你交上来，办完就发下来，中间什么过程不需要关心。如果需要老百姓们跑腿，哪天流程要是变了，是不是还要让他们自己再去各种浪费时间，如果不需要，流程变只是自己内部变，你们几个办事的专员熟悉就可以，岂不是方便很多</p>
+<h4 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h4><p>号称这个是最大的原则，这个是上面所有原则的实质，扩展则开，修改则闭，最优的方法就是在原来的基础上进行扩展，不改变之前的逻辑，流程和代码，在他的基础上进行添加和修改</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>上面只是解释了几个概念，更多的应该还是要去项目中体会，每个原则不是都可以被遵守的，严格遵守是非常困难的，我觉得总结下来应该是，设计方面应该都是面向接口和抽象来，而修改需要时也要尽可能通过扩展来实现，细粒度设计，分配好不同接口的职责，写起来以此为原则才能写的更『优雅』吧</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/05/go-impression/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          GO语言印象
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/31/baosun/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">(转)《抱孙》——老舍</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="the-zen-of-design-patterns-1" data-title="笔记---《设计模式之禅》(1)" data-url="http://www.apepro.com/2016/08/01/the-zen-of-design-patterns-1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"xsong16"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Elangx
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.6.1/MathJax.js">
+</script>
+
+
+  </div>
+</body>
+</html>
