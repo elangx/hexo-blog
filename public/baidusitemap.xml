@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://www.apepro.com/2016/05/20/happy-520/</loc>
+    <loc>http://www.apepro.com/2016/08/09/groupcache-analysis-1/</loc>
     <lastmod>2016-08-17T11:26:07.000Z</lastmod>
     <data>
         <display>
-        <title>520</title>
-        <pubTime>2016-05-20T02:11:33.000Z</pubTime>
+        <title>groupcache源码解析(1)</title>
+        <pubTime>2016-08-08T16:49:36.000Z</pubTime>
         
-        <tag>杂谈</tag>
+        <tag>GO</tag>
          
          
            
@@ -38,14 +38,14 @@
 
     
   <url>
-    <loc>http://www.apepro.com/2016/06/01/about-php-template-engine/</loc>
+    <loc>http://www.apepro.com/2016/06/06/ai-vs-vr-who-is-the-destroyer/</loc>
     <lastmod>2016-08-17T11:26:07.000Z</lastmod>
     <data>
         <display>
-        <title>PHP模板引擎的那些事</title>
-        <pubTime>2016-06-01T12:46:43.000Z</pubTime>
+        <title>AI与VR，谁才是毁灭者？</title>
+        <pubTime>2016-06-06T12:08:11.000Z</pubTime>
         
-        <tag>PHP</tag>
+        <tag>杂谈</tag>
          
          
            
@@ -72,23 +72,6 @@
 
     
   <url>
-    <loc>http://www.apepro.com/2016/08/09/groupcache-analysis-1/</loc>
-    <lastmod>2016-08-17T11:26:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>groupcache源码解析(1)</title>
-        <pubTime>2016-08-08T16:49:36.000Z</pubTime>
-        
-        <tag>GO</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.apepro.com/2016/08/05/go-impression/</loc>
     <lastmod>2016-08-17T11:26:07.000Z</lastmod>
     <data>
@@ -106,14 +89,14 @@
 
     
   <url>
-    <loc>http://www.apepro.com/2016/06/06/ai-vs-vr-who-is-the-destroyer/</loc>
+    <loc>http://www.apepro.com/2015/02/11/install-php-extension/</loc>
     <lastmod>2016-08-17T11:26:07.000Z</lastmod>
     <data>
         <display>
-        <title>AI与VR，谁才是毁灭者？</title>
-        <pubTime>2016-06-06T12:08:11.000Z</pubTime>
+        <title>添加php扩展方法</title>
+        <pubTime>2015-02-11T15:00:24.000Z</pubTime>
         
-        <tag>杂谈</tag>
+        <tag>PHP</tag>
          
          
            
@@ -123,12 +106,12 @@
 
     
   <url>
-    <loc>http://www.apepro.com/2015/02/11/install-php-extension/</loc>
+    <loc>http://www.apepro.com/2016/06/01/about-php-template-engine/</loc>
     <lastmod>2016-08-17T11:26:07.000Z</lastmod>
     <data>
         <display>
-        <title>添加php扩展方法</title>
-        <pubTime>2015-02-11T15:00:24.000Z</pubTime>
+        <title>PHP模板引擎的那些事</title>
+        <pubTime>2016-06-01T12:46:43.000Z</pubTime>
         
         <tag>PHP</tag>
          
@@ -199,6 +182,23 @@
         <display>
         <title>当人类遇到外星人——科幻电影与《三体》</title>
         <pubTime>2016-05-28T07:37:35.000Z</pubTime>
+        
+        <tag>杂谈</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.apepro.com/2016/05/20/happy-520/</loc>
+    <lastmod>2016-08-17T11:26:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>520</title>
+        <pubTime>2016-05-20T02:11:33.000Z</pubTime>
         
         <tag>杂谈</tag>
          
