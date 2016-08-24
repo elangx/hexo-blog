@@ -91,7 +91,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/GO/" style="font-size: 13.33px;">GO</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/技术笔记/" style="font-size: 10px;">技术笔记</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a>
+						<a href="/tags/GO/" style="font-size: 13.33px;">GO</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/技术笔记/" style="font-size: 10px;">技术笔记</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a>
 					</div>
 				</section>
 				
@@ -146,6 +146,66 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-php-compilation-exception-virtual-memory-exhausted-cannot-allocate-memory" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/09/11/php-compilation-exception-virtual-memory-exhausted-cannot-allocate-memory/" class="article-date">
+  	<time datetime="2015-09-11T03:06:53.000Z" itemprop="datePublished">2015-09-11 11:06:53</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/11/php-compilation-exception-virtual-memory-exhausted-cannot-allocate-memory/">PHP编译过程中出现virtual memory exhausted： Cannot allocate memory</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>今天在机器上编译php5.6，make时出现一个virtual memory exhausted: Cannot allocate memory的问题，感觉我的云主机虽然比较low但也不至于如此吧，怎么说也有1G内存呢（虽然当时开着mysql和nginx），于是开始去网上找原因，最后在官网bug里发现这么一条<a href="https://bugs.php.net/bug.php?id=48809" target="_blank" rel="external">https://bugs.php.net/bug.php?id=48809</a>，里面提到编译可能需要600M-700M……</li>
+<li>不过下面有人给出个方案，configure时加上–disable-fileinfo选项，具体原因还不知道，反正现在还不需要fileinfo，用到时再加扩展吧</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-install-php-extension" class="article article-type-post" itemscope itemprop="blogPost">
   

@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>YAF 2.2.9在php5.6.2中的一个问题记录 | 猿程序-Elangx</title>
+  <title>前端搅局中 | 猿程序-Elangx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在用yaf，在家里的电脑上编译安装，安装的是最近的稳定版2.2.9，php版本是5.6.2，在编译时会却提示了一个错误：12/Users/yangxian/tmp/yaf-2.2.9/yaf_config.c:89:9: error: use of undeclared identifier&apos;IS_">
+  <meta name="description" content="被要求实现一个可以通过自定义生成页面的功能，无心更新中……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="YAF 2.2.9在php5.6.2中的一个问题记录">
-<meta property="og:url" content="http://www.apepro.com/2015/02/11/a-program-of-using-yaf-2-2-9-in-php-5-6-2/index.html">
+<meta property="og:title" content="前端搅局中">
+<meta property="og:url" content="http://www.apepro.com/2016/08/24/played-by-js/index.html">
 <meta property="og:site_name" content="猿程序-Elangx">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在用yaf，在家里的电脑上编译安装，安装的是最近的稳定版2.2.9，php版本是5.6.2，在编译时会却提示了一个错误：12/Users/yangxian/tmp/yaf-2.2.9/yaf_config.c:89:9: error: use of undeclared identifier&apos;IS_">
-<meta property="og:updated_time" content="2016-08-17T11:26:07.000Z">
+<meta property="og:description" content="被要求实现一个可以通过自定义生成页面的功能，无心更新中……">
+<meta property="og:updated_time" content="2016-08-24T08:58:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YAF 2.2.9在php5.6.2中的一个问题记录">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在用yaf，在家里的电脑上编译安装，安装的是最近的稳定版2.2.9，php版本是5.6.2，在编译时会却提示了一个错误：12/Users/yangxian/tmp/yaf-2.2.9/yaf_config.c:89:9: error: use of undeclared identifier&apos;IS_">
+<meta name="twitter:title" content="前端搅局中">
+<meta name="twitter:description" content="被要求实现一个可以通过自定义生成页面的功能，无心更新中……">
   
   
     <link rel="icon" href="/img/avatar.png">
@@ -149,11 +149,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-a-program-of-using-yaf-2-2-9-in-php-5-6-2" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-played-by-js" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/02/11/a-program-of-using-yaf-2-2-9-in-php-5-6-2/" class="article-date">
-  	<time datetime="2015-02-11T14:47:43.000Z" itemprop="datePublished">2015-02-11 22:47:43</time>
+      <a href="/2016/08/24/played-by-js/" class="article-date">
+  	<time datetime="2016-08-24T08:56:12.000Z" itemprop="datePublished">2016-08-24 16:56:12</time>
 </a>
     </div>
   
@@ -166,7 +166,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      YAF 2.2.9在php5.6.2中的一个问题记录
+      前端搅局中
     </h1>
   
 
@@ -175,7 +175,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 	</div>
 
         
@@ -186,9 +186,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最近在用yaf，在家里的电脑上编译安装，安装的是最近的稳定版2.2.9，php版本是5.6.2，在编译时会却提示了一个错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Users/yangxian/tmp/yaf-2.2.9/yaf_config.c:89:9: error: use of undeclared identifier</div><div class="line"><span class="string">'IS_CONSTANT_ARRAY'</span> <span class="keyword">case</span> IS_CONSTANT_ARRAY: &#123;</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于是就自己在yaf_config.c中define了一个，编译通过后写了一个简单的实例，但不知道为什么，在输出页面时总加上一个乱码bom头之类的东西，但我的vim编辑的文件是没有bom头的，而且发现输出是在action之后，view文件之前的，可能是框架本身的问题，由于yaf是C的扩展，目前要调试就只能跟到源码中了……去yaf群里问还被个『大神』鄙视……非把chrome自己的排版问题说成我把html头写到了body里……无果后觉得可能是2.2.9和高版本php之间的问题或者我加了define完后出的问题。后在<a href="https://github.com/laruence/php-yaf/issues/144" target="_blank" rel="external">yaf的issue</a>中有人问过一个类似问题，鸟哥还是建议用yaf的2.3.3了，于是编译了2.3.3后问题就消失了……这里记录下吧</p>
+        <p>被要求实现一个可以通过自定义生成页面的功能，无心更新中……</p>
 
       
     </div>
@@ -198,15 +196,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/02/11/install-php-extension/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          添加php扩展方法
-        
-      </div>
-    </a>
   
+    <a href="/2016/08/09/groupcache-analysis-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">groupcache源码解析(1)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -239,7 +233,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="a-program-of-using-yaf-2-2-9-in-php-5-6-2" data-title="YAF 2.2.9在php5.6.2中的一个问题记录" data-url="http://www.apepro.com/2015/02/11/a-program-of-using-yaf-2-2-9-in-php-5-6-2/"></div>
+	<div class="ds-thread" data-thread-key="played-by-js" data-title="前端搅局中" data-url="http://www.apepro.com/2016/08/24/played-by-js/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
