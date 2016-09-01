@@ -1,5 +1,5 @@
 ---
-title: wishes-from-the-moon
+title: 新月许愿
 date: 2016-09-01 22:42:16
 tags: 杂谈
 ---
